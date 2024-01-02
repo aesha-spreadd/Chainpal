@@ -1,41 +1,43 @@
 @font-face {
   font-family: NexaLight;
-  src: url('./Font/NexaLight.otf');
+  src: url('./font/NexaLight.otf');
 }
 
 @font-face {
   font-family: NexaBlack;
-  src: url('./Font/NexaBlack.otf');
+  src: url('./font/NexaBlack.otf');
 }
 
 @font-face {
   font-family: NexaBold;
-  src: url('./Font/NexaBold.otf');
+  src: url('./font/NexaBold.otf');
 }
 
-* {
-  margin-top: 10px;
+body,
+wrapper {
+  background: #000000;
 }
 
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 .banner-section {
-  background-color: black;
-  display: flex;
-  margin: auto;
+  background: #000000;
+  margin: 0 auto;
   position: relative;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.container-banner {
-  display: flex;
 }
 
 .main-title {
   display: none;
   font-size: 25px;
   line-height: 63px;
-  color: black;
+  color: #000000;
   margin: 0 0 15px;
 }
 
@@ -46,26 +48,24 @@
 .left-section {
   width: 50%;
   text-align: left;
-  margin: 50px 0px 40px 40px;
+  margin: 50px 0 0;
   flex: 1;
 }
 
 .banner-image {
   max-width: 400px;
   width: 100%;
-  align-self: flex-start;
 }
 
 .right-section {
   width: 50%;
-  margin: 50px 40px 40px 0px;
+  margin: 50px 0 0;
   flex: 1;
 }
 
 .title {
-  padding: 0px 6px 0px 0px;
+  padding: 0 6px 0 0;
   font-size: 44px;
-  letter-spacing: normal;
   font-weight: 700;
   color: #c6cdd9;
   line-height: 66px;
@@ -76,35 +76,35 @@
   font-family: NexaLight;
   font-size: 20px;
   font-weight: 300;
-  color: white;
+  color: #ffffff;
   margin: 0 10px 35px 0;
   line-height: 34px;
 }
 
-.learnmore-link-button {
+.learnmorebtn {
   font-family: NexaBold;
   font-size: 14px;
   padding: 15px 30px;
   font-weight: 300;
   color: #d9e2fd;
   border-radius: 8px;
-  background-color: blue;
-  border: 1.5px solid blue;
+  background-color: #0000ff !important;
+  color: #ffffff !important;
   cursor: pointer;
   text-decoration: none;
-  height: 36px;
+  height: auto;
+  max-height: 36px;
 }
 
 @media (max-width: 991px) {
-  .banner-section {
-    width: 100%;
-    display: flex;
+  .banner-wrapper {
+    margin: 10px;
   }
   .left-section {
     text-align: left;
     max-width: 130px;
     width: 100%;
-    margin: 80px 20px 0 0;
+    margin: 0 auto;
   }
 
   .main-title {
@@ -113,9 +113,8 @@
     font-size: 25px;
     font-weight: 700;
     line-height: 34px;
-    letter-spacing: normal;
     color: #c6cdd9;
-    position: absolute;
+    margin: 10px 0 0 0;
   }
 
   .banner-image {
@@ -130,20 +129,23 @@
   .right-section {
     width: 50%;
     text-align: left;
+    margin: 6px 0 0 10px;
   }
 
   .description {
     font-family: NexaLight;
     font-size: 12px;
     line-height: 20px;
-    margin: 38px 15px 15px 0;
+    margin: 0 auto;
   }
-  .learnmore-link-button {
+  .button-wrapper {
+    margin: 8px 0 0;
+  }
+  .learnmorebtn {
     padding: 9px 15px;
     font-size: 12px;
-  }
-  .container-banner {
-    margin: 0 0 0 15px;
+    border-radius: 3px;
+    text-transform: lowercase;
   }
 }
 
@@ -152,7 +154,14 @@
   padding: 120px 0 50px;
 }
 
-.backgroundImg {
+.roadmapwrap {
+  max-width: 2000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.roadmapwrap::before {
+  content: '';
   position: absolute;
   background-image: url(https://www.chainpals.io/assets/images/guest/svgs/roadmap.svg);
   background-repeat: no-repeat;
@@ -160,32 +169,20 @@
   max-width: 390px;
   width: 100%;
   height: 390px;
-  left: 0;
-  top: 80px;
-  z-index: -1;
-}
-.dates {
-  display: none;
-}
-
-.container-fluid {
-  max-width: 1000px;
-  padding-right: 0px;
-  padding-left: 0px;
+  left: -82px;
+  top: 102px;
 }
 
 .heading {
   font-family: NexaBold;
   text-align: center;
   font-size: 48px;
-  font-weight: normal;
   line-height: 56px;
-  letter-spacing: -0.05em;
   color: #c6cdd9;
 }
 
 .roadmap-wrapper {
-  margin-top: 40px;
+  margin: 40px 0 0;
 }
 
 .swiper-wrapper {
@@ -203,8 +200,8 @@
 
 .timestamp {
   width: 100%;
-  margin-bottom: 20px;
-  color: white;
+  margin: 0 0 20px;
+  color: #ffffff;
   position: relative;
 }
 
@@ -222,7 +219,7 @@
   position: absolute;
   width: 120%;
   height: 23px;
-  background-color: blue;
+  background-color: #0000ff;
   top: -10px;
   margin: 0 auto;
   border-radius: 23px;
@@ -233,11 +230,9 @@
   position: absolute;
   width: 16px;
   height: 16px;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 34px;
   top: -38px;
-  left: 0;
-  right: 0;
   margin: 0 auto;
   z-index: 1;
 }
@@ -253,7 +248,7 @@
   font-weight: 300;
   line-height: 30px;
   letter-spacing: normal;
-  color: grey;
+  color: #808080;
   position: relative;
   border: 6px solid #191c26;
 }
@@ -271,43 +266,17 @@
   color: #acb0b9;
 }
 
-#hides {
+.roadmapdate {
   display: none;
 }
 
-@media (min-width: 724px) and (max-width: 724px) {
-  .backgroundImg {
-    max-width: 190px;
-    height: 190px;
-    left: 450px;
-    right: -100px;
-    top: 130px;
-    z-index: -1;
-    position: absolute;
+@media (max-width: 991px) {
+  .container {
+    max-width: 1500px;
+    width: 100%;
   }
-}
-
-@media (max-width: 667px) and (min-width: 375px) {
-  .backgroundImg {
-    max-width: 190px;
-    max-height: 190px;
-    left: 600px;
-    right: -100px;
-    top: 170px;
-    z-index: -1;
-    position: absolute;
-  }
-}
-
-@media (max-width: 991px) and (min-width: 991px) {
-  .backgroundImg {
-    max-width: 190px;
-    height: 190px;
-    left: 150px;
-    right: -100px;
-    top: 130px;
-    z-index: -1;
-    position: absolute;
+  .roadmapwrap::before {
+    display: none;
   }
   .heading {
     font-size: 25px;
@@ -316,7 +285,7 @@
     position: sticky;
   }
   .swiper-wrapper {
-    overflow-x: scroll;
+    overflow: scroll;
     justify-content: flex-start;
   }
   .roadmap-swiper {
@@ -334,12 +303,12 @@
     content: '';
     position: absolute;
     width: 115%;
-    background-color: blue;
+    background-color: #0000ff;
     border-radius: 43px;
     top: -1px;
   }
   .status {
-    max-width: 270px;
+    max-width: 120px;
     width: 100%;
     border-radius: 14px;
     margin: 5px;
@@ -353,19 +322,18 @@
   }
   .status::before {
     left: 36px;
-    margin: 0;
     max-width: 8px;
     max-height: 8px;
-    background-color: white;
+    background-color: #ffffff;
     border-radius: 25px;
     border: none;
     top: -34px;
   }
-  .date#hides {
+  .roadmapdate {
     max-width: 90px;
     width: 100%;
     display: block;
-    background: turquoise;
+    background: rgb(137, 198, 194);
     padding: 8px 10px 6px;
     margin: 0 0 15px;
     box-shadow: inset 0 2px 2px #0000008a;
@@ -375,16 +343,9 @@
     font-size: 12px;
     font-weight: 600;
     line-height: 14px;
-    letter-spacing: normal;
   }
   p {
     font-size: 14px;
     line-height: 20px;
-  }
-  .container-fluid {
-    max-width: 1000px;
-    padding-right: 0px;
-    padding-left: 0px;
-    width: 100%;
   }
 }
