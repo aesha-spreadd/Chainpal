@@ -1,0 +1,390 @@
+@font-face {
+  font-family: NexaLight;
+  src: url('./Font/NexaLight.otf');
+}
+
+@font-face {
+  font-family: NexaBlack;
+  src: url('./Font/NexaBlack.otf');
+}
+
+@font-face {
+  font-family: NexaBold;
+  src: url('./Font/NexaBold.otf');
+}
+
+* {
+  margin-top: 10px;
+}
+
+.banner-section {
+  background-color: black;
+  display: flex;
+  margin: auto;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container-banner {
+  display: flex;
+}
+
+.main-title {
+  display: none;
+  font-size: 25px;
+  line-height: 63px;
+  color: black;
+  margin: 0 0 15px;
+}
+
+.banner-wrapper {
+  display: flex;
+}
+
+.left-section {
+  width: 50%;
+  text-align: left;
+  margin: 50px 0px 40px 40px;
+  flex: 1;
+}
+
+.banner-image {
+  max-width: 400px;
+  width: 100%;
+  align-self: flex-start;
+}
+
+.right-section {
+  width: 50%;
+  margin: 50px 40px 40px 0px;
+  flex: 1;
+}
+
+.title {
+  padding: 0px 6px 0px 0px;
+  font-size: 44px;
+  letter-spacing: normal;
+  font-weight: 700;
+  color: #c6cdd9;
+  line-height: 66px;
+  font-family: NexaBold;
+}
+
+.description {
+  font-family: NexaLight;
+  font-size: 20px;
+  font-weight: 300;
+  color: white;
+  margin: 0 10px 35px 0;
+  line-height: 34px;
+}
+
+.learnmore-link-button {
+  font-family: NexaBold;
+  font-size: 14px;
+  padding: 15px 30px;
+  font-weight: 300;
+  color: #d9e2fd;
+  border-radius: 8px;
+  background-color: blue;
+  border: 1.5px solid blue;
+  cursor: pointer;
+  text-decoration: none;
+  height: 36px;
+}
+
+@media (max-width: 991px) {
+  .banner-section {
+    width: 100%;
+    display: flex;
+  }
+  .left-section {
+    text-align: left;
+    max-width: 130px;
+    width: 100%;
+    margin: 80px 20px 0 0;
+  }
+
+  .main-title {
+    display: block;
+    font-family: NexaBold;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: normal;
+    color: #c6cdd9;
+    position: absolute;
+  }
+
+  .banner-image {
+    max-width: 100%;
+    max-width: 400px;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .right-section {
+    width: 50%;
+    text-align: left;
+  }
+
+  .description {
+    font-family: NexaLight;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 38px 15px 15px 0;
+  }
+  .learnmore-link-button {
+    padding: 9px 15px;
+    font-size: 12px;
+  }
+  .container-banner {
+    margin: 0 0 0 15px;
+  }
+}
+
+.roadmap-section {
+  position: relative;
+  padding: 120px 0 50px;
+}
+
+.backgroundImg {
+  position: absolute;
+  background-image: url(https://www.chainpals.io/assets/images/guest/svgs/roadmap.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-width: 390px;
+  width: 100%;
+  height: 390px;
+  left: 0;
+  top: 80px;
+  z-index: -1;
+}
+.dates {
+  display: none;
+}
+
+.container-fluid {
+  max-width: 1000px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.heading {
+  font-family: NexaBold;
+  text-align: center;
+  font-size: 48px;
+  font-weight: normal;
+  line-height: 56px;
+  letter-spacing: -0.05em;
+  color: #c6cdd9;
+}
+
+.roadmap-wrapper {
+  margin-top: 40px;
+}
+
+.swiper-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.roadmap-swiper {
+  max-width: 220px;
+  width: 100%;
+  font-size: 18px;
+  position: relative;
+  text-align: center;
+}
+
+.timestamp {
+  width: 100%;
+  margin-bottom: 20px;
+  color: white;
+  position: relative;
+}
+
+.status-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.status-wrapper::before {
+  z-index: 1;
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 23px;
+  background-color: blue;
+  top: -10px;
+  margin: 0 auto;
+  border-radius: 23px;
+}
+
+.status::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 34px;
+  top: -38px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.status {
+  background: #191c26;
+  border-radius: 14px;
+  margin: 25px 10px;
+  padding: 10px;
+  font-family: NexaLight;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: normal;
+  color: grey;
+  position: relative;
+  border: 6px solid #191c26;
+}
+
+.date {
+  font-family: NexaBold;
+}
+
+.roadmap-description {
+  font-size: 16px;
+  line-height: 28px;
+  margin: 0 0 20px;
+  font-weight: 300;
+  font-family: NexaLight;
+  color: #acb0b9;
+}
+
+#hides {
+  display: none;
+}
+
+@media (min-width: 724px) and (max-width: 724px) {
+  .backgroundImg {
+    max-width: 190px;
+    height: 190px;
+    left: 450px;
+    right: -100px;
+    top: 130px;
+    z-index: -1;
+    position: absolute;
+  }
+}
+
+@media (max-width: 667px) and (min-width: 375px) {
+  .backgroundImg {
+    max-width: 190px;
+    max-height: 190px;
+    left: 600px;
+    right: -100px;
+    top: 170px;
+    z-index: -1;
+    position: absolute;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 991px) {
+  .backgroundImg {
+    max-width: 190px;
+    height: 190px;
+    left: 150px;
+    right: -100px;
+    top: 130px;
+    z-index: -1;
+    position: absolute;
+  }
+  .heading {
+    font-size: 25px;
+    line-height: 32px;
+    text-align: center;
+    position: sticky;
+  }
+  .swiper-wrapper {
+    overflow-x: scroll;
+    justify-content: flex-start;
+  }
+  .roadmap-swiper {
+    min-width: 200px;
+  }
+  .timestamp {
+    display: none;
+  }
+  .status-wrapper {
+    padding: 10px 5px;
+    position: relative;
+  }
+  .status-wrapper::before {
+    height: 13px;
+    content: '';
+    position: absolute;
+    width: 115%;
+    background-color: blue;
+    border-radius: 43px;
+    top: -1px;
+  }
+  .status {
+    max-width: 270px;
+    width: 100%;
+    border-radius: 14px;
+    margin: 5px;
+    padding: 20px;
+    text-align: left;
+    position: relative;
+    top: 15px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+  }
+  .status::before {
+    left: 36px;
+    margin: 0;
+    max-width: 8px;
+    max-height: 8px;
+    background-color: white;
+    border-radius: 25px;
+    border: none;
+    top: -34px;
+  }
+  .date#hides {
+    max-width: 90px;
+    width: 100%;
+    display: block;
+    background: turquoise;
+    padding: 8px 10px 6px;
+    margin: 0 0 15px;
+    box-shadow: inset 0 2px 2px #0000008a;
+    border-radius: 30px;
+    text-align: center;
+    font-family: NexaBold;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14px;
+    letter-spacing: normal;
+  }
+  p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .container-fluid {
+    max-width: 1000px;
+    padding-right: 0px;
+    padding-left: 0px;
+    width: 100%;
+  }
+}
